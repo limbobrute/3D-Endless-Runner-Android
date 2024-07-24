@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Platforms : MonoBehaviour
@@ -20,7 +18,6 @@ public class Platforms : MonoBehaviour
 
         if(transform.position.z >= -0.1f && transform.position.z <= 0.1f && !hasSpawned)
         {
-            //transform.position = Vector3.zero;
             gameManager.Spawn(); 
             hasSpawned = true; 
         }
