@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class SwipeDetect : MonoBehaviour
 {
-    private InputManager inputManager;
+    [SerializeField] InputManager inputManager;
     private Vector2 startPos;
     private float startTime;
     private Vector2 EndPos;
@@ -15,7 +15,7 @@ public class SwipeDetect : MonoBehaviour
 
     private void Start()
     {
-        inputManager = InputManager.Instance; 
+        //inputManager = GetComponent<InputManager>();//InputManager.Instance; 
     }
 
     private void OnEnable()
