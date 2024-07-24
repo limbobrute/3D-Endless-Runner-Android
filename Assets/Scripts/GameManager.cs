@@ -5,9 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    //public GameObject FullPlat;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
+
+    [SerializeField] private bool GameOver = false; 
 
     private void Awake()
     {
@@ -17,23 +18,20 @@ public class GameManager : MonoBehaviour
         { Instance = this; }
     }
 
-    private void Start()
+    /*private void Start()
     {
-        /*GameObject FirstPlat =*/
-        Instantiate(Platforms[0], new Vector3(0f,0f,3f), Quaternion.Euler(0f, 90f,0f));
-        //StartCoroutine(Spawn());
-    }
+        Instantiate(Platforms[0], new Vector3(0f, 0f, 3f), Quaternion.Euler(0f, 90f,0f));
+    }*/
 
     public void Spawn()
     {
         int rand = Random.Range(0, Platforms.Length);
-        Instantiate(Platforms[rand], new Vector3(0f, 0f, 3f), Quaternion.Euler(0f, 90f, 0f));
+        Instantiate(Platforms[rand], new Vector3(0f, 0f, 9f), Quaternion.Euler(0f, 90f, 0f));
     }
 
-    /*IEnumerator Spawn()
+    public void GameEnd()
     {
-        yield return new WaitForSeconds(2f);
-        Instantiate(FullPLat, new Vector3(0f, 0f, 3f), Quaternion.identity);
-        StartCoroutine(Spawn());
-    }*/
+        GameOver = true;
+        GlobalSpeedMulti = 0f;
+    }
 }

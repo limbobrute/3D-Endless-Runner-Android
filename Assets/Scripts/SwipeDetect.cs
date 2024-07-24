@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class SwipeDetect : MonoBehaviour
@@ -70,16 +71,32 @@ public class SwipeDetect : MonoBehaviour
         }
         if (Vector2.Dot(Vector2.left, dir) > directionThreshold && Player.position.x != -1f)
         {
-            float x = Player.position.x;
-            Player.position = new Vector3(x - 1f, 1.5f, 0);
+            float x = Player.position.x - 1f;
+            StartCoroutine(MovePlayer(x));
+            //Player.position = new Vector3(x - 1f, 1.5f, 0);
             Debug.Log("You swiped left");
         }
         if (Vector2.Dot(Vector2.right, dir) > directionThreshold && Player.position.x != 1f)
         {
-            float x = Player.position.x;
-            Player.position = new Vector3(x + 1f, 1.5f, 0);
+            float x = Player.position.x + 1f;
+            StartCoroutine(MovePlayer(x));
+            //Player.position = new Vector3(x + 1f, 1.5f, 0);
             Debug.Log("You swiped right");
         }
 
+    }
+
+    IEnumerator MovePlayer(float target)
+    {
+        float step = 0f;
+        while (Mathf.Abs(Player.position.x - target) > 0.01f)
+        {
+            step += Time.deltaTime;
+            float x = Mathf.Lerp(Player.position.x, target, step/2f);
+            Player.position = new Vector3(x, 1.5f, 0f);
+            yield return null;
+        }
+
+        Player.position = new Vector3(target, 1.5f, 0f);
     }
 }
