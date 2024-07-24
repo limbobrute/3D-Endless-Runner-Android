@@ -84,10 +84,10 @@ public class SwipeDetect : MonoBehaviour
         {
             step += Time.deltaTime;
             float x = Mathf.Lerp(PlayerObj.position.x, target, step/2f);
-            PlayerObj.position = new Vector3(x, 1.5f, 0f);
+            PlayerObj.position = new Vector3(x, PlayerObj.position.y, 0f);
             yield return null;
         }
 
-        PlayerObj.position = new Vector3(target, 1.5f, 0f);
+        PlayerObj.position = new Vector3(target, PlayerObj.position.y, 0f);
     }
 }

@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject RestartButton;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
+    public SwipeDetect swipe;
 
     [SerializeField] private bool GameOver = false; 
 
@@ -30,6 +33,14 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         GameOver = true;
+        swipe.enabled = false;
+        RestartButton.SetActive(true);
         GlobalSpeedMulti = 0f;
+    }
+
+    public void StartAgain()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
 }
