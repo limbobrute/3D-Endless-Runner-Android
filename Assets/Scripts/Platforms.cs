@@ -9,12 +9,14 @@ public class Platforms : MonoBehaviour
     public GameObject[] SpawnPoints;
     public float speed = 2f;
     private bool hasSpawned = false;
+    [SerializeField] int CoinSpawnChance;
 
     private void Start()
     {
         gameManager = GameManager.Instance;
         Coin = gameManager.CoinObj();
         FootObs = gameManager.FootObj();
+        CoinSpawnChance = gameManager.CoinSpawnChance;
 
         if (!isFirst)
         { CoinAndFootObs(); }
@@ -39,12 +41,12 @@ public class Platforms : MonoBehaviour
     {
         foreach(GameObject obj in SpawnPoints) 
         {
-            float rand = Random.Range(0f, 10f);
-            if(rand <= 1.5f)
+            int rand = Random.Range(0, 101);
+            if(rand <= CoinSpawnChance)
             {
                 Instantiate(Coin, obj.transform.position, Quaternion.Euler(0f, 90f, 0f), this.transform);
             }
-            else if(rand <= 2f)
+            else if(rand <= CoinSpawnChance + 5f)
             {
                 Instantiate(FootObs, obj.transform.position, Quaternion.Euler(0f, 0f, 0f), this.transform);
             }

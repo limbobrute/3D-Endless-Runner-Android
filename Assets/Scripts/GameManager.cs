@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public GameObject RestartButton;
+    public GameObject Buttons;
+    public GameObject CoinButton;
     public TextMeshProUGUI HeldCoinUI;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
+    public int CoinSpawnChance = 15;
     public SwipeDetect swipe;
     public DataHolder dataHolder;
 
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CoinsHeld = dataHolder.SavedCoins;
+        CoinSpawnChance += dataHolder.CoinSpawnIncrease;
         HeldCoinUI.text = "$ " + CoinsHeld.ToString();
     }
 
@@ -41,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         GameOver = true;
         swipe.enabled = false;
-        RestartButton.SetActive(true);
+        Buttons.SetActive(true);
         GlobalSpeedMulti = 0f;
     }
 
@@ -50,6 +54,24 @@ public class GameManager : MonoBehaviour
         dataHolder.SavedCoins = CoinsHeld;
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+    }
+
+    public void IncreaseCoinSpawn(int increase)
+    {
+        dataHolder.CoinSpawnIncrease += increase;
+        CoinsHeld -= 10;
+        HeldCoinUI.text = "$ " + CoinsHeld.ToString();
+        CoinSpawnChance += increase;
+        Debug.Log("Increased Coin Spawn rate, which is now 0." + (CoinSpawnChance).ToString() + "%");
+    }
+
+    public void CheckValidUpgrade()
+    {
+        Button button = CoinButton.GetComponent<Button>();
+        if(CoinsHeld < 10)
+        { button.interactable = false; }
+        else 
+        { button.interactable = true;}
     }
 
     public void AddCoin()

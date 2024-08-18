@@ -6,4 +6,5 @@ using UnityEngine;
 public class DataHolder : ScriptableObject
 {
     public int SavedCoins = 0;
+    public int CoinSpawnIncrease = 0;
 }

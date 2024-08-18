@@ -56,23 +56,23 @@ public class SwipeDetect : MonoBehaviour
         if(Vector2.Dot(Vector2.up, dir) > directionThreshold)
         {
             Player.StartJump();
-            Debug.Log("You swiped up");
+            //Debug.Log("You swiped up");
         }
         if (Vector2.Dot(Vector2.down, dir) > directionThreshold)
         {
-            Debug.Log("You swiped down");
+            //Debug.Log("You swiped down");
         }
         if (Vector2.Dot(Vector2.left, dir) > directionThreshold && PlayerObj.position.x != -1f)
         {
             float x = PlayerObj.position.x - 1f;
             StartCoroutine(MovePlayer(x));
-            Debug.Log("You swiped left");
+            //Debug.Log("You swiped left");
         }
         if (Vector2.Dot(Vector2.right, dir) > directionThreshold && PlayerObj.position.x != 1f)
         {
             float x = PlayerObj.position.x + 1f;
             StartCoroutine(MovePlayer(x));
-            Debug.Log("You swiped right");
+            //Debug.Log("You swiped right");
         }
 
     }
