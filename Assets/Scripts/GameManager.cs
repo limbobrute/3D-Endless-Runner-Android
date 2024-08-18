@@ -1,14 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject RestartButton;
+    public TextMeshProUGUI HeldCoinUI;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
     public SwipeDetect swipe;
+    public DataHolder dataHolder;
 
+    [SerializeField] GameObject JumpingObstcale;
+    [SerializeField] GameObject Coin;
+    [SerializeField] int CoinsHeld = 0;
     [SerializeField] private bool GameOver = false; 
 
     private void Awake()
@@ -19,10 +25,11 @@ public class GameManager : MonoBehaviour
         { Instance = this; }
     }
 
-    /*private void Start()
+    private void Start()
     {
-        Instantiate(Platforms[0], new Vector3(0f, 0f, 3f), Quaternion.Euler(0f, 90f,0f));
-    }*/
+        CoinsHeld = dataHolder.SavedCoins;
+        HeldCoinUI.text = "$ " + CoinsHeld.ToString();
+    }
 
     public void Spawn()
     {
@@ -40,7 +47,24 @@ public class GameManager : MonoBehaviour
 
     public void StartAgain()
     {
+        dataHolder.SavedCoins = CoinsHeld;
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+    }
+
+    public void AddCoin()
+    {
+        CoinsHeld++;
+        HeldCoinUI.text = "$ " + CoinsHeld.ToString();
+    }
+
+    public GameObject CoinObj()
+    {
+        return Coin;
+    }
+
+    public GameObject FootObj()
+    {
+        return JumpingObstcale;
     }
 }

@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FullPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 9151498245928911060, guid: abce72a4ccf39e749ac2bb570f702c75, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -378,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RestartButton: {fileID: 1238146142}
+  JumpingObstcale: {fileID: 6800550802720174752, guid: cc587912ff7506841b83149b74fa558d, type: 3}
   Platforms:
   - {fileID: 9151498245928911060, guid: abce72a4ccf39e749ac2bb570f702c75, type: 3}
   - {fileID: 1511439512034430250, guid: cd8b1b348f199e44ab462ece9c402f5f, type: 3}
@@ -973,8 +978,8 @@ GameObject:
   - component: {fileID: 2004663999}
   - component: {fileID: 2004663998}
   - component: {fileID: 2004663997}
-  - component: {fileID: 2004663996}
   - component: {fileID: 2004664001}
+  - component: {fileID: 2004664002}
   - component: {fileID: 2004664000}
   m_Layer: 0
   m_Name: Player
@@ -983,29 +988,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &2004663996
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004663995}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2004663997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1118,6 +1100,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2004664002
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004663995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

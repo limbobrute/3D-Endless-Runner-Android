@@ -42,6 +42,11 @@ public class Player : MonoBehaviour
         StartCoroutine(Jump());
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Coin(Clone)")
+        { gameManager.AddCoin(); }
+    }
     IEnumerator Jump()
     {
         float x = 0f;

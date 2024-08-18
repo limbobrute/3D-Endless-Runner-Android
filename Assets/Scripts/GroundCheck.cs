@@ -5,14 +5,16 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour
 {
     public Player player;
-    //[SerializeField] private int touching = 0;
+
     void OnTriggerEnter(Collider other)
     {
-        player.Add();
+        if (other.gameObject.CompareTag("Ground"))
+        { player.Add(); }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player.Minus();
+        if (other.gameObject.CompareTag("Ground"))
+        { player.Minus(); }
     }
 }
