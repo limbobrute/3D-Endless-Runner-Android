@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameObject Buttons;
     public GameObject CoinButton;
+    public TextMeshProUGUI CostShower;
     public TextMeshProUGUI HeldCoinUI;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         GameOver = true;
         swipe.enabled = false;
         Buttons.SetActive(true);
+        CheckValidUpgrade();
         GlobalSpeedMulti = 0f;
     }
 
@@ -59,16 +61,18 @@ public class GameManager : MonoBehaviour
     public void IncreaseCoinSpawn(int increase)
     {
         dataHolder.CoinSpawnIncrease += increase;
-        CoinsHeld -= 10;
+        dataHolder.CoinSpawnCost += 5;
+        CoinsHeld -= dataHolder.CoinSpawnCost;
         HeldCoinUI.text = "$ " + CoinsHeld.ToString();
         CoinSpawnChance += increase;
-        Debug.Log("Increased Coin Spawn rate, which is now 0." + (CoinSpawnChance).ToString() + "%");
+        Debug.Log("Increased Coin Spawn rate, which is now 0." + CoinSpawnChance.ToString() + "%");
     }
 
     public void CheckValidUpgrade()
     {
+        CostShower.text = "Cost $ " + dataHolder.CoinSpawnCost.ToString();
         Button button = CoinButton.GetComponent<Button>();
-        if(CoinsHeld < 10)
+        if(CoinsHeld < dataHolder.CoinSpawnCost)
         { button.interactable = false; }
         else 
         { button.interactable = true;}
