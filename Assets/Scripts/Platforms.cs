@@ -6,7 +6,9 @@ public class Platforms : MonoBehaviour
     GameObject Coin;
     GameObject FootObs;
     public bool isFirst;
+    public bool isRamp;
     public GameObject[] SpawnPoints;
+    public float RampYSpawn = 0f;
     public float speed = 2f;
     private bool hasSpawned = false;
     [SerializeField] int CoinSpawnChance;
@@ -18,6 +20,9 @@ public class Platforms : MonoBehaviour
         FootObs = gameManager.FootObj();
         CoinSpawnChance = gameManager.CoinSpawnChance;
 
+        if (isRamp)
+        { gameManager.SetYSpawn(RampYSpawn); }
+
         if (!isFirst)
         { CoinAndFootObs(); }
     }
@@ -27,10 +32,15 @@ public class Platforms : MonoBehaviour
         z = z - (speed * Time.deltaTime * gameManager.GlobalSpeedMulti);
         transform.position = new Vector3(transform.position.x, transform.position.y, z);
 
-        if(transform.position.z >= -0.1f && transform.position.z <= 0.1f && !hasSpawned && gameObject.CompareTag("Ground"))
+        if(transform.position.z >= -0.1f && transform.position.z <= 0.1f && !hasSpawned && gameObject.CompareTag("Ground") && !isRamp)
         {
             gameManager.Spawn(); 
-            hasSpawned = true; 
+            hasSpawned = true;
+        }
+        else if(transform.position.z >= -4.1f && transform.position.z <= -3.9f && !hasSpawned && gameObject.CompareTag("Ground") && isRamp)
+        {
+            gameManager.Spawn();
+            hasSpawned = true;
         }
 
         if(transform.position.z <= -18.8f)

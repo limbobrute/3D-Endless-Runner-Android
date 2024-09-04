@@ -475,6 +475,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3362696369447963641, guid: abce72a4ccf39e749ac2bb570f702c75, type: 3}
+      propertyPath: isFirst
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8927784209925389042, guid: abce72a4ccf39e749ac2bb570f702c75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -810,6 +814,7 @@ MonoBehaviour:
   - {fileID: 7748101943386286229, guid: 0b16fed4b6f62ee40b2e2919b168f143, type: 3}
   - {fileID: 7220318308610463271, guid: 8a96105e18106864490bc15fdb90ad85, type: 3}
   - {fileID: 3960395981297234038, guid: b29d67bbefa05e54298b438ddee8ec39, type: 3}
+  - {fileID: 8119467820090763793, guid: 596b0036f33cbc642b6f9db55a179096, type: 3}
   GlobalSpeedMulti: 1
   CoinSpawnChance: 15
   swipe: {fileID: 832229363}
@@ -817,6 +822,7 @@ MonoBehaviour:
   JumpingObstcale: {fileID: 6800550802720174752, guid: cc587912ff7506841b83149b74fa558d, type: 3}
   Coin: {fileID: 4792751991513890120, guid: 5da9e28252ac12348809418a7067de9a, type: 3}
   CoinsHeld: 0
+  YSpawn: 0
   GameOver: 0
 --- !u!4 &832229362
 Transform:
@@ -848,7 +854,7 @@ MonoBehaviour:
   inputManager: {fileID: 832229364}
   PlayerObj: {fileID: 2004663999}
   Player: {fileID: 2004664000}
-  minDistance: 0.1
+  minDistance: 0.01
   maxTime: 1.5
   directionThreshold: 0.9
 --- !u!114 &832229364
@@ -1024,12 +1030,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1759528, y: 0, z: 0, w: 0.98439866}
-  m_LocalPosition: {x: 0, y: 4.44, z: -4.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.1759528, y: -0, z: -0, w: 0.98439866}
+  m_LocalPosition: {x: 0, y: 2.94, z: -5.1222224}
+  m_LocalScale: {x: 1.1111112, y: 1.0121461, z: 1.0964909}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2004663999}
   m_LocalEulerAnglesHint: {x: 14.303, y: 0, z: 0}
 --- !u!1 &1137591636
 GameObject:
@@ -1614,7 +1620,7 @@ GameObject:
   - component: {fileID: 2004663998}
   - component: {fileID: 2004663997}
   - component: {fileID: 2004664001}
-  - component: {fileID: 2004664002}
+  - component: {fileID: 2004664003}
   - component: {fileID: 2004664000}
   m_Layer: 0
   m_Name: Player
@@ -1687,6 +1693,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1137591637}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2004664000
@@ -1735,7 +1742,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2004664002
+--- !u!135 &2004664003
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1750,12 +1757,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.45
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.6, z: 0.12}
 --- !u!1 &2049685278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1805,6 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 2004663999}
   - {fileID: 832229362}

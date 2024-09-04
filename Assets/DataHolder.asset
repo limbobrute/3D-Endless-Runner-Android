@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DataHolder
   m_EditorClassIdentifier: 
   SavedCoins: 0
-  CoinSpawnIncrease: 5
-  CoinSpawnCost: 15
+  CoinSpawnIncrease: 0
+  CoinSpawnCost: 10

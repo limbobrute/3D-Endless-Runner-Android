@@ -42,11 +42,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Coin(Clone)")
-        { gameManager.AddCoin(); other.gameObject.SetActive(false); }
-    }
     IEnumerator Jump()
     {
         float x = 0f;
@@ -54,9 +49,9 @@ public class Player : MonoBehaviour
         { x = 1f; }
         else if (StartPos.x == -1f)
         { x = -1f; }
-        transform.position = new Vector3(x, 1.55f, transform.position.z);
+        transform.position = new Vector3(x, transform.position.y + 0.05f, transform.position.z);
         float step = 0.1f;
-        while (transform.position.y > 1.5f)
+        while (transform.position.y > StartPos.y)
         {
             if(x != transform.position.x)
             { x = transform.position.x; StartPos.x = x; }
@@ -71,5 +66,21 @@ public class Player : MonoBehaviour
         isJumping = false;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Coin(Clone)")
+        { gameManager.AddCoin(); other.gameObject.SetActive(false); }
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        { Add(); }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        { Minus(); }
+    }
 }

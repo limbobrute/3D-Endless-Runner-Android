@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject JumpingObstcale;
     [SerializeField] GameObject Coin;
     [SerializeField] int CoinsHeld = 0;
-    [SerializeField] private bool GameOver = false; 
+    [SerializeField] float YSpawn = 0.0f;
+    [SerializeField] private bool GameOver = false;
+    private bool RampedUp = false;
+    private bool RampedDown = false;
 
     private void Awake()
     {
@@ -39,8 +42,17 @@ public class GameManager : MonoBehaviour
     public void Spawn()
     {
         int rand = Random.Range(0, Platforms.Length);
-        Instantiate(Platforms[rand], new Vector3(0f, 0f, 9f), Quaternion.Euler(0f, 90f, 0f));
+        GameObject platform = Instantiate(Platforms[rand], new Vector3(0f, YSpawn, 9f), Quaternion.Euler(0f, 90f, 0f));
+
+        Platforms plat = platform.GetComponent<Platforms>();
+        if(plat.isRamp && !RampedUp)
+        { platform.transform.rotation = Quaternion.Euler(0f, 270f, 0f); RampedUp = true; }
+        else if(plat.isRamp && RampedUp)
+        { Destroy(platform); Spawn(); }
     }
+
+    public void SetYSpawn(float ySpawn)
+    { YSpawn = ySpawn; }
 
     public void GameEnd()
     {
