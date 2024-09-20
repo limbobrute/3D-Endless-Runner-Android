@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI HeldCoinUI;
     public GameObject[] Platforms = new GameObject[0];
     public float GlobalSpeedMulti = 1f;
+    public float UpRampMod = 0f;
+    public float DownRampMod = 0f;
     public int CoinSpawnChance = 15;
     public SwipeDetect swipe;
     public DataHolder dataHolder;
@@ -45,14 +47,35 @@ public class GameManager : MonoBehaviour
         GameObject platform = Instantiate(Platforms[rand], new Vector3(0f, YSpawn, 9f), Quaternion.Euler(0f, 90f, 0f));
 
         Platforms plat = platform.GetComponent<Platforms>();
-        if(plat.isRamp && !RampedUp)
-        { platform.transform.rotation = Quaternion.Euler(0f, 270f, 0f); RampedUp = true; }
-        else if(plat.isRamp && RampedUp)
-        { Destroy(platform); Spawn(); }
+        if (plat.UpRamp || plat.DownRamp)
+        {
+            if(plat.DownRamp && RampedUp)
+            { RampedUp = false; }
+            else if(plat.UpRamp && RampedDown)
+            { RampedDown = false; }
+
+            if (plat.UpRamp && !RampedUp)
+            { 
+                SetYSpawn(UpRampMod); 
+                platform.transform.rotation = Quaternion.Euler(0f, 270f, 0f); 
+                RampedUp = true; 
+            }
+            else if (plat.UpRamp && RampedUp)
+            { Destroy(platform); Spawn(); }
+
+            if (plat.DownRamp && !RampedDown)
+            { 
+                SetYSpawn(DownRampMod); 
+                platform.transform.rotation = Quaternion.Euler(0f, 270f, 0f); 
+                RampedDown = true; 
+            }
+            else if (plat.DownRamp && RampedDown)
+            { Destroy(platform); Spawn(); }
+        }
     }
 
     public void SetYSpawn(float ySpawn)
-    { YSpawn = ySpawn; }
+    { YSpawn += ySpawn; }
 
     public void GameEnd()
     {

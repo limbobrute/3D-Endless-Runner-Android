@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 583789931633488435}
   - component: {fileID: 4302614702928977736}
   - component: {fileID: 8464761785057021000}
-  - component: {fileID: 6821774345898706205}
   m_Layer: 0
   m_Name: BlackTile1
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6821774345898706205
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222467070259362322}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &261125552670738932
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +597,6 @@ GameObject:
   - component: {fileID: 6758593902364055246}
   - component: {fileID: 1019299306984722084}
   - component: {fileID: 4586565965806977517}
-  - component: {fileID: 6839153817570127422}
   m_Layer: 0
   m_Name: BlackTile0
   m_TagString: Untagged
@@ -692,27 +669,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6839153817570127422
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2745640680690510602}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3113230215387479633
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +807,6 @@ GameObject:
   - component: {fileID: 9373242782203981}
   - component: {fileID: 1282991854550974776}
   - component: {fileID: 5077617578542898658}
-  - component: {fileID: 7757805094511291437}
   m_Layer: 0
   m_Name: BlackTile0
   m_TagString: Untagged
@@ -924,27 +879,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7757805094511291437
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3819125609165191531}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3868018687965348509
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +921,6 @@ GameObject:
   - component: {fileID: 7162402725651781824}
   - component: {fileID: 7447569927085123262}
   - component: {fileID: 853984379225533031}
-  - component: {fileID: 1168546554900703688}
   m_Layer: 0
   m_Name: BlackTile3
   m_TagString: Untagged
@@ -1060,27 +993,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1168546554900703688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4047871190465941112}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4553058213300195428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1004,6 @@ GameObject:
   - component: {fileID: 4479925032478455335}
   - component: {fileID: 1701683340729620636}
   - component: {fileID: 7316598150045513432}
-  - component: {fileID: 6550291436415781859}
   m_Layer: 0
   m_Name: BlackTile3
   m_TagString: Untagged
@@ -1165,27 +1076,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6550291436415781859
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4553058213300195428}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4835647660957389398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1149,6 @@ GameObject:
   - component: {fileID: 7240256024661608910}
   - component: {fileID: 8733350441861782086}
   - component: {fileID: 1339109521507736230}
-  - component: {fileID: 3576698117923154340}
   m_Layer: 0
   m_Name: BlackTile3
   m_TagString: Untagged
@@ -1332,27 +1221,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3576698117923154340
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5406673179512297042}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5594922326081784695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1294,6 @@ GameObject:
   - component: {fileID: 5257159963244522147}
   - component: {fileID: 3688943911570956622}
   - component: {fileID: 3813239243626377647}
-  - component: {fileID: 4825205580737578856}
   m_Layer: 0
   m_Name: BlackTile0
   m_TagString: Untagged
@@ -1499,27 +1366,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4825205580737578856
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5786399818837691581}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6166322475177502459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1470,6 @@ GameObject:
   - component: {fileID: 2936769187416128172}
   - component: {fileID: 4500399578861045879}
   - component: {fileID: 86128564760359593}
-  - component: {fileID: 3489584356005728049}
   m_Layer: 0
   m_Name: BlackTile2
   m_TagString: Untagged
@@ -1697,27 +1542,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3489584356005728049
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7106389842817607102}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7235886992860378773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1615,6 @@ GameObject:
   - component: {fileID: 5497809300160933949}
   - component: {fileID: 784042549900509256}
   - component: {fileID: 2764834144122329455}
-  - component: {fileID: 6844421604832510072}
   m_Layer: 0
   m_Name: BlackTile1
   m_TagString: Untagged
@@ -1864,27 +1687,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6844421604832510072
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7452609037730109192}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7624218104098289906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1760,6 @@ GameObject:
   - component: {fileID: 3325569342179830737}
   - component: {fileID: 947281592993381962}
   - component: {fileID: 2036152837029920269}
-  - component: {fileID: 4129176040047001206}
   m_Layer: 0
   m_Name: BlackTile2
   m_TagString: Untagged
@@ -2031,27 +1832,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4129176040047001206
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7886511081359217395}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7900095046141554662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +1843,6 @@ GameObject:
   - component: {fileID: 1665594825384086184}
   - component: {fileID: 4166570861539017436}
   - component: {fileID: 8749082297702552689}
-  - component: {fileID: 7914676206068644695}
   m_Layer: 0
   m_Name: BlackTile1
   m_TagString: Untagged
@@ -2136,27 +1915,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7914676206068644695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7900095046141554662}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7944385368214226590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +1957,6 @@ GameObject:
   - component: {fileID: 2944214778232658546}
   - component: {fileID: 6564614932418496024}
   - component: {fileID: 8770437560068726768}
-  - component: {fileID: 3902198472494945100}
   m_Layer: 0
   m_Name: BlackTile2
   m_TagString: Untagged
@@ -2272,27 +2029,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3902198472494945100
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8101569444825040796}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8301867229326696082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2102,6 @@ GameObject:
   - component: {fileID: 5430358793451321557}
   - component: {fileID: 3353474903429608507}
   - component: {fileID: 1259971741692989557}
-  - component: {fileID: 8913002060373999943}
   m_Layer: 0
   m_Name: BlackTile4
   m_TagString: Untagged
@@ -2439,27 +2174,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8913002060373999943
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8408087912551316558}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8660006898991046979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2256,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2561,7 +2275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFirst: 0
-  isRamp: 0
+  UpRamp: 0
+  DownRamp: 0
   SpawnPoints:
   - {fileID: 6877006848490384242}
   - {fileID: 1485621886440449599}
@@ -2590,5 +2305,6 @@ MonoBehaviour:
   - {fileID: 8306277495785904530}
   - {fileID: 986052752215101169}
   - {fileID: 7446032688936580515}
+  RampYSpawn: 0
   speed: 2
   CoinSpawnChance: 0
